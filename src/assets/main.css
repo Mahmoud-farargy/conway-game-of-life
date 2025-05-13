@@ -1,0 +1,76 @@
+@import 'tailwindcss';
+@import './base.css';
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+/* styles.css or your global stylesheet */
+@layer base {
+  :root {
+    --primary-accent: #ff6900;
+    --text-muted: #7a8288;
+  }
+  [data-theme="dark"] body {
+    --color-text: #ebebeba3;
+  }
+  [data-theme="light"] body {
+    --color-text: #2c3e50;
+  }
+}
+
+@layer components {
+  .text-primary {
+    @apply text-orange-500;
+  }
+  .bg-primary {
+    @apply bg-orange-500;
+  }
+  .primay-text-gradient{
+    @apply bg-gradient-to-br from-orange-500 to-yellow-400 text-transparent bg-clip-text group-hover:from-orange-500 group-hover:to-yellow-400 dark:text-transparent dark:group-hover:text-transparent focus:ring-4 focus:outline-none focus:ring-yellow-200 dark:focus:ring-yellow-800;
+  }
+}
+* {
+  -webkit-user-select: none;
+}
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+} */
+html,
+body {
+  font-family: 'Fira Code', monospace;
+}
+::selection {
+  background: var(--primary-accent); 
+  color: #ffff;
+}
+
+/* transitions for Tailwind */
+.slide-enter-active {
+  animation: slide-in 0.4s;
+}
+.slide-leave-active {
+  animation: slide-out 0.4s;
+}
+/* animations for transitions */
+@keyframes slide-in {
+  0% {
+    transform: translateY(-3%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-out {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-3%);
+    opacity: 0;
+  }
+}
