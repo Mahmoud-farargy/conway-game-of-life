@@ -3,7 +3,7 @@
     <section id="grid" :class="`${showGridLines ? '' : 'bg-gray-200 dark:bg-gray-700'} grid mb-4 cursor-pointer`"
         :style="`grid-template-columns: repeat(${gridSize}, minmax(0, 1fr))`" @mousedown="markCell" @mouseup="markCellUp"
         @mouseover="markCellOver"
-        @touchmove="markCellOver">
+       >
         <!-- Cell -->
         <div v-for="(cell, index) in grid" :key="index"
             :class="`cell ${showGridLines ? 'border-[1px] border-white dark:border-gray-500' : ''} ${determinColor(cell)}`.trim()"
