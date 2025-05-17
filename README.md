@@ -47,6 +47,13 @@ Built with Vue 3 (Composition API), TypeScript, and Tailwind CSS.
 
 ![Live Demo](https://lifeonboard.netlify.app)
 
+## Future Improvements / Enhancements
+
+- Remove unnecessary async/await since the 'getLocalStorage' function isn't asynchronous (App: line 32)
+- Teleport the App Modal to the body element to avoid z-index and stacking issues (AppModal: line 2)
+- Call stopGame() in the onUnmounted hook to properly clean up timers (useGameOfLife: line 243)
+- Debounce the 'calcGridSize' function on resize events to optimize performance (useGameOfLife: line 218)
+
 ## Setup for Starting the Project Locally
 
 ```sh
