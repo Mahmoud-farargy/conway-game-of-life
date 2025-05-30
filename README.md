@@ -6,6 +6,16 @@ A simple yet powerful implementation of Conway's Game of Life, featuring full re
 
 Built with Vue 3 (Composition API), TypeScript, and Tailwind CSS.
 
+## Related Project
+
+This companion project explores alternative implementations of Conway’s Game of Life. Built in under 4 hours, it showcases:
+- Canvas version
+- p5.js version
+- Two-array grid approach
+- Unit tests
+
+[Conway's Game Lite](https://github.com/Mahmoud-farargy/conways-life-canvas-p5-two-arrays)
+
 ## Features
 
 - Start/Stop (Autoplay)
